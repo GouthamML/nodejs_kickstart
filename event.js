@@ -1,5 +1,4 @@
 var events = require('events');
-
 var emitter = new events.EventEmitter();
 
 var handler = function conncted(){
@@ -19,6 +18,8 @@ emitter.on('data_received', function(){
 });
 
 //fire connection event
+console.log("\n\nFisrt line\n\n");
 emitter.emit('connection_event');
 
 console.log("program ended");
+console.log(listeners('data_received'));
